@@ -61,6 +61,7 @@ namespace Lab1
         }
 
 
+        //TODO
         public static void QueryKeyValueMap<TKey, TValue>(
                 IKeyValueMap<TKey, TValue> keyValueMap,
                 List<KeyValuePair<TKey, TValue>> keyValuePairs)
@@ -68,6 +69,7 @@ namespace Lab1
            
         }
 
+        //TODO
         public static void RemoveKeyValueMap<TKey, TValue>(
                 IKeyValueMap<TKey, TValue> keyValueMap,
                 List<KeyValuePair<TKey, TValue>> keyValuePairs)

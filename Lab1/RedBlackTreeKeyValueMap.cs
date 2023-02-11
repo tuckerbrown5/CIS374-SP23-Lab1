@@ -1,6 +1,7 @@
 ﻿namespace Lab1
 {
-    internal class RedBlackTreeKeyValueMap<TKey, TValue>
+    //TODO
+    public class RedBlackTreeKeyValueMap<TKey, TValue>
     {
         public RedBlackTreeKeyValueMap()
         {
