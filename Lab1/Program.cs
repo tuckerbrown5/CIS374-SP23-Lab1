@@ -9,8 +9,8 @@ namespace Lab1
     {
         static void Main(string[] args)
         {
-            int MAX = 100000;
-            int ITERATIONS = 51;
+            int MAX = 100_000;
+            int ITERATIONS = 11;
 
             double totalOrderedCreate = 0;
             double totalUnorderedCreate = 0;
@@ -33,7 +33,7 @@ namespace Lab1
                 var redblackKeyValueMap = new RedBlackTreeKeyValueMap<int, int>();
 
 
-                keyValueMap = bstKeyValueMap;
+                keyValueMap = dictionaryKeyValueMap;
 
                 //Console.WriteLine("DictionaryKeyValueMap");
                 // Console.WriteLine("BSTKeyValueMap");
