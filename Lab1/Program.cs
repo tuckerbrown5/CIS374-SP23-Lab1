@@ -36,7 +36,7 @@ namespace Lab1
                 var avlKeyValueMap = new AVLTreeKeyValueMap<int, int>();
                 var redblackKeyValueMap = new RedBlackTreeKeyValueMap<int, int>();
 
-                keyValueMap = dictionaryKeyValueMap;
+                keyValueMap = bstKeyValueMap;
 
                 //Console.WriteLine("DictionaryKeyValueMap");
                 // Console.WriteLine("BSTKeyValueMap");
@@ -47,9 +47,9 @@ namespace Lab1
 
                 //Console.WriteLine("Unordered");
                 intKeyValuePairs.Shuffle();
-                dictionaryKeyValueMap = new DictionaryKeyValueMap<int, int>();
-                totalUnorderedCreate += CreateKeyValueMap<int, int>(dictionaryKeyValueMap, intKeyValuePairs);
-                totalHeightUnordered += dictionaryKeyValueMap.Height;
+                keyValueMap.Clear();
+                totalUnorderedCreate += CreateKeyValueMap<int, int>(keyValueMap, intKeyValuePairs);
+                totalHeightUnordered += keyValueMap.Height;
 
                 //bstKeyValueMap = new BinarySearchTreeKeyValueMap<int, int>();
                 //CreateKeyValueMap<int, int>(bstKeyValueMap, intKeyValuePairs);
