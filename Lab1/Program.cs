@@ -16,6 +16,10 @@ namespace Lab1
             double totalUnorderedCreate = 0;
 
             double totalOrderedGet = 0;
+            double totalUnorderedGet = 0;
+
+            double totalOrderedRemove = 0;
+            double totalUnorderedRemove = 0;
 
             double totalHeightOrdered = 0;
             double totalHeightUnordered = 0;
@@ -41,15 +45,15 @@ namespace Lab1
                 keyValueMap.Clear();
                 // Ordered
                 totalOrderedCreate += CreateKeyValueMap<int, int>(keyValueMap, intKeyValuePairs);
-                totalHeightOrdered += keyValueMap.Height;
+                //totalHeightOrdered += keyValueMap.Height;
 
                 //totalOrderedGet += QueryKeyValueMap<int, int>(keyValueMap, intKeyValuePairs);
 
                 // Unordered
                 intKeyValuePairs.Shuffle();
                 keyValueMap.Clear();
-                totalUnorderedCreate += CreateKeyValueMap<int, int>(keyValueMap, intKeyValuePairs);
-                totalHeightUnordered += keyValueMap.Height;
+                //totalUnorderedCreate += CreateKeyValueMap<int, int>(keyValueMap, intKeyValuePairs);
+                //totalHeightUnordered += keyValueMap.Height;
 
             }
 
