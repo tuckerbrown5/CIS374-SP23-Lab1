@@ -26,7 +26,7 @@ namespace DSA.DataStructures.Trees
         /// <summary>
         /// Gets the height of the <see cref="RedBlackTreeMap{TKey, TValue}"/>.
         /// </summary>
-        public int Height
+        public new int Height
         {
             get
             {

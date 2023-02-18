@@ -97,10 +97,26 @@ namespace Lab1
 
         //TODO
         public static double QueryKeyValueMap<TKey, TValue>(
-                IKeyValueMap<TKey, TValue> keyValueMap,
-                List<KeyValuePair<TKey, TValue>> keyValuePairs)
+            IKeyValueMap<TKey, TValue> keyValueMap,
+            List<KeyValuePair<TKey, TValue>> keyValuePairs)
         {
-            return 0.0;
+            Stopwatch stopwatch = new Stopwatch();
+
+            stopwatch.Start();
+
+            foreach (var kvp in keyValuePairs)
+            {
+                var value = keyValueMap.Get(kvp.Key);
+                if (!value.Equals(kvp.Value))
+                {
+                    throw new Exception("Value mismatch for key " + kvp.Key + ": " + value + " != " + kvp.Value);
+                }
+            }
+
+            stopwatch.Stop();
+
+            Console.WriteLine(stopwatch.Elapsed.TotalSeconds);
+            return stopwatch.Elapsed.TotalSeconds;
         }
 
         //TODO
@@ -108,7 +124,19 @@ namespace Lab1
                 IKeyValueMap<TKey, TValue> keyValueMap,
                 List<KeyValuePair<TKey, TValue>> keyValuePairs)
         {
-            return 0.0;
+            Stopwatch stopwatch = new Stopwatch();
+
+            stopwatch.Start();
+
+            foreach (var kvp in keyValuePairs)
+            {
+                keyValueMap.Remove(kvp.Key);
+            }
+
+            stopwatch.Stop();
+
+            Console.WriteLine(stopwatch.Elapsed.TotalSeconds);
+            return stopwatch.Elapsed.TotalSeconds;
         }
     }
 }

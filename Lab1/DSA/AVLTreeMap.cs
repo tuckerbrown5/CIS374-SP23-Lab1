@@ -20,7 +20,7 @@ namespace DSA.DataStructures.Trees
         /// <summary>
         /// Gets the height of the <see cref="AVLTreeMap{TKey, TValue}"/>.
         /// </summary>
-        public int Height { get { return NodeHeight(Root); } }
+        public new int Height { get { return NodeHeight(Root); } }
 
         /// <summary>
         /// Gets the number of elements in the <see cref="AVLTreeMap{TKey, TValue}"/>.
